@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* background all page*/
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/Transjakarta\ Scania\ K310iB.jpg');
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* navbar all page*/
+.navbar {
+    background-color: #082A98;
+    border-bottom: 4px solid white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.logo {
+    width: 60px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bdcbfb;
+}
+
+/* index */
+.row {
+    display: flex;
+    height: calc(100% - 80px);
+    align-items: center;
+}
+
+.col {
+    flex: 1;
+    padding: 20px;
+    flex-basis: 50%;
+}
+
+h1 {
+    color: #fff;
+    font-size: 80px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+h2 {
+    color: #082A98;
+    font-size: 35px;
+}
+
+h6 {
+    color: #082A98;
+    font-size: 15px;
+}
+
+h7, p{
+    color: #fff;
+    font-size: 20px;
+    line-height: 15px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 675px;
+    height: auto;
+    border-radius: 10px;
+    padding: 15px 25px;
+    background: #ffffff;
+}
+
+button {
+    background-color: #082A98;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+button:hover {
+    background-color: #9aaff4;
+}
+
+/* login & regis */
+.wrapper {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0 6px 12px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.wrapper h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #082A98;
+}
+
+.wrapper p {
+    color: #082A98;
+}
+
+.input-box input {
+    width: 100%;
+    height: 40px;
+    background: #EDEDED;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: -10px;
+}
+
+.input-box {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.input-box input::placeholder {
+    color: #082A98;
+}
+
+.wrapper.forgot-password {
+    display: flex;
+    align-items: right;
+    margin: -15px 0 15px;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #082A98;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-left: 0%;
+}
+
+.wrapper .regitrasi-link {
+    font-size: 1px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.regitrasi-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 90px;
+}
+
+.regitrasi-link p a:hover {
+    text-decoration: underline;
+}
+
+/* snackbar */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+#snackbar.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+/* schedule */
+.home-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    color: #082A98;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.selection-container, btn btn-tambah {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.dropdown {
+    display: inline-block;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+select {
+    background-color: #082A98;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #9aaff4;
+}
+
+.btn {
+    background-color: #082A98;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #9aaff4;
+}
+
+.content-text {
+    margin-top: 20px;
+}
+
+.table-data {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-data th, .table-data td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-data th {
+    background-color: #082A98;
+    color: white;
+}
+
+.table-data td {
+    background-color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    nav ul li {
+        margin-left: 30px;
+    }
+
+    .row {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .home-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .wrapper h1 {
+        font-size: 25px;
+    }
+
+    .input-box input {
+        padding: 10px;
+    }
+
+    .wrapper .btn {
+        height: 40px;
+    }
+
+    .regitrasi-link {
+        font-size: 12px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content {
+        width: 95%;
+    }
+}
